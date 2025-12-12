@@ -175,5 +175,80 @@ client.on("interactionCreate", async (interaction) => {
     }, 3000);
   }
 });
+const { ModalBuilder, TextInputBuilder, TextInputStyle, ActionRowBuilder, StringSelectMenuBuilder } = require("discord.js");
+
+// Store verification codes for each user
+const verificationCodes = new Map(); 
+
+client.on("interactionCreate", async (interaction) => {
+  // VERIFY BUTTON
+  if (interaction.isButton() && interaction.customId === "verify_button") {
+    // Generate random 6-character code (letters + numbers, case-sensitive)
+    const code = Math.random().toString(36).substring(2, 8) + Math.random().toString(36).substring(2, 8).toUpperCase();
+    verificationCodes.set(interaction.user.id, code);
+
+    // Show modal to user
+    const modal = new ModalBuilder()
+      .setCustomId(`verify_modal_${interaction.user.id}`)
+      .setTitle("Server Verification");
+
+    const input = new TextInputBuilder()
+      .setCustomId("verification_code")
+      .setLabel("Enter the verification code")
+      .setPlaceholder(`Type the exact code shown: ${code}`)
+      .setStyle(TextInputStyle.Short)
+      .setRequired(true);
+
+    modal.addComponents(new ActionRowBuilder().addComponents(input));
+
+    await interaction.showModal(modal);
+  }
+
+  // MODAL SUBMISSION
+  if (interaction.isModalSubmit() && interaction.customId.startsWith("verify_modal_")) {
+    const userId = interaction.user.id;
+    const code = verificationCodes.get(userId);
+
+    const submittedCode = interaction.fields.getTextInputValue("verification_code");
+
+    if (submittedCode === code) {
+      // ✅ Correct code
+      verificationCodes.delete(userId);
+
+      // Assign Verified role
+      const verifiedRole = interaction.guild.roles.cache.find(r => r.name === "Verified");
+      if (verifiedRole) await interaction.member.roles.add(verifiedRole);
+
+      // Send follow-up with role selection menu
+      const roleSelect = new ActionRowBuilder().addComponents(
+        new StringSelectMenuBuilder()
+          .setCustomId("role_select")
+          .setPlaceholder("Select your roles")
+          .setMinValues(1)
+          .setMaxValues(3) // adjust max as needed
+          .addOptions([
+            { label: "Gamer", value: "gamer_role_id" },
+            { label: "Artist", value: "artist_role_id" },
+            { label: "Developer", value: "developer_role_id" },
+          ])
+      );
+
+      await interaction.reply({ content: "✅ Verification successful! Select your roles below:", components: [roleSelect], ephemeral: true });
+    } else {
+      // ❌ Incorrect code
+      await interaction.reply({ content: "❌ Incorrect code. Please try again.", ephemeral: true });
+    }
+  }
+
+  // ROLE SELECTION
+  if (interaction.isStringSelectMenu() && interaction.customId === "role_select") {
+    const roles = interaction.values.map(id => interaction.guild.roles.cache.get(id)).filter(r => r);
+    for (const role of roles) {
+      await interaction.member.roles.add(role);
+    }
+
+    await interaction.reply({ content: "✅ Roles assigned successfully!", ephemeral: true });
+  }
+});
 // ----- LOGIN -----
 client.login(TOKEN);
