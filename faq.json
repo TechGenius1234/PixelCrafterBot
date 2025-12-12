@@ -1,0 +1,32 @@
+{
+    "faq": {
+      "1": {
+        "name": "Skill Roles",
+        "answer": "➤ 𝑺𝒄𝒓𝒊𝒑𝒕𝒆𝒓\n➤ 𝑩𝒖𝒊𝒍𝒅𝒆𝒓\n➤ 𝑴𝒐𝒅𝒆𝒍𝒆𝒓\n➤ 𝑮𝑭𝑿 𝑨𝒓𝒕𝒊𝒔𝒕\n➤ 𝑽𝑭𝑿 𝑨𝒓𝒕𝒊𝒔𝒕\n➤ 𝑰𝒏𝒕𝒆𝒓𝒇𝒂𝒄𝒆\n➤ 𝑨𝒏𝒊𝒎𝒂𝒕𝒐𝒓\n➤ 𝑪𝒍𝒐𝒕𝒉𝒊𝒏𝒈\n➤ 𝑺𝒇𝒙 𝑨𝒓𝒕𝒊𝒔𝒕\n➤ 𝑽𝒊𝒅𝒆𝒐 𝑬𝒅𝒊𝒕𝒆𝒓\n\nThese roles are used to show that the person is a trusted person in their skill role. This helps people trust them mainly in the market — so if someone has these roles and you’re hiring them, they are trusted.\n\n📌 To apply, you must send a **portfolio**."
+      },
+      "2": {
+        "name": "This ticket will be closed within 24h if there is no activity.",
+        "answer": "Please be active in this ticket\n or we will close this ticket."
+      },
+      "3": {
+        "name": "Points!",
+        "answer": "**How it works**\nWith points you can REDEEM a free basic advertisement or free ASSET that's under 50 Robux.\n\n**How to gain points**\n- Helping someone\n- Being active on the server\n- Winning a giveaway\n\n**Rewards**\n- Asset under 50 Robux → 7 points\n- Basic advertisement → 12 points"
+      },
+      "4": {
+        "name": "Support Tickets",
+        "answer": "Create a ticket to report someone or to request a partnership or any questions"
+      },
+      "5": {
+        "name": "Anything else?",
+        "answer": "Anything else you would like to add?"
+      },
+      "6": {
+        "name": "Would you like to close this ticket?",
+        "answer": "Respond with yes or no"
+      },
+      "arewehiring": {
+        "name": "Are we hiring?",
+        "answer": "At the moment No!"
+      }
+    }
+}  

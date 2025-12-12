@@ -1,0 +1,114 @@
+{
+    "premiumMarketing": {
+        "messages": [
+            "# 「 ✦ **Premium Marketing Plan** ✦ 」",
+            "ᯓ★ Cost: 150 Robux (originally 350 Robux!)",
+            "ᯓ★ Custom Role included",
+            "ᯓ★ Access to For Hire and Hiring Channel",
+            "ᯓ★ Premium Advertisement placement",
+            "ᯓ★ 1-time use of Advanced Add feature",
+            "ᯓ★ Plus many more perks! 🔥",
+            "If you want to purchase, please create a ticket by clicking the button below.",
+            "===================================================================",
+            "# Payment Options: Robux & PayPal",
+            "- **Robux Plans:**",
+            "   - Basic: 150 Robux → 350 Ad’s in total",
+            "   - Silver: 300 Robux → 750 Ad’s in total",
+            "   - Advanced: 750 Robux → 1500 Ad’s in total",
+            "- **PayPal (USD):**",
+            "   - Basic: $5 → 500 bonus ads",
+            "   - Silver: $15 → 1550 bonus ads",
+            "   - Advanced: $20 → 5500 bonus ads",
+            "===================================================================",
+            "More info here: https://docs.google.com/document/d/1YHZ-e97ps1VP_JdoavixPPrY0LYpmXwkokfS6ZA5qxU/edit?usp=sharing"              
+      ],
+      "embed": {
+        "title": "🎟 Marketing Plan",
+        "description": "Click below to purchase a plan",
+        "color": 44678,
+        "buttonLabel": "🎫 Open Ticket",
+        "buttonId": "create_ticketmarketing",
+        "buttonStyle": "Primary"
+      },
+      "ticket": {
+        "prefix": "marketingplanticket",
+        "intro":  "{user}, Thank you for your intrest in buying our plans! Please note we have multiple plans and you are to pay using one of the payment options."
+      }
+    },
+    "hireus": {
+      "messages": [
+         "# Hey there! Welcome to our Hire Us page.",
+         "## Looking for a dev? See https://discord.com/channels/1390358390248702002/1419416476426702979",
+         "Create a ticket to be added to our list!!"
+      ],
+      "embed": {
+        "title": "Submit the application to get on our list",
+        "description": "Click below to get started!",
+        "color": 44678,
+        "buttonLabel": "Get Started",
+        "buttonId": "create_tickethireus",
+        "buttonStyle": "Primary"
+      },
+      "ticket": {
+        "prefix": "hireusapplication",
+        "intro":  "{user}, Please wait and we will contact you!"
+      }
+    },
+    "support": {
+      "embed": {
+        "title": "🎟 Support",
+        "description": "Click below for support",
+        "color": 44678,
+        "buttonLabel": "🎫 Open Ticket",
+        "buttonId": "create_ticketsupport",
+        "buttonStyle": "Primary"
+      },
+      "ticket": {
+        "prefix": "support",
+        "intro": "{user}, thank you for creating a support ticket. A staff member will assist you shortly."
+      }
+    },
+    "skillRoles": {
+      "embed": {
+        "title": "🎟 Skill Roles",
+        "description": "Click below to start the application",
+        "color": 44678,
+        "buttonLabel": "🎫 Open Ticket",
+        "buttonId": "create_ticketskrole",
+        "buttonStyle": "Primary"
+      },
+      "ticket": {
+        "prefix": "skillroles",
+        "intro": "{user}, thank you for opening a ticket. A staff member will assist you shortly."
+      }
+    },
+    "points": {
+      "embed": {
+        "title": "🎟 Points",
+        "description": "Click below to open a ticket",
+        "color": 44678,
+        "buttonLabel": "🎫 Open Ticket",
+        "buttonId": "create_ticketpoints",
+        "buttonStyle": "Primary"
+      },
+      "ticket": {
+        "prefix": "points",
+        "intro": "{user}, thank you for opening a ticket. A staff member will assist you shortly."
+      }
+    },
+    "assets": {
+      "embed": {
+        "title": "🎟 Assets",
+        "description": "Click below to open a ticket",
+        "color": 44678,
+        "buttonLabel": "🎫 Open Ticket",
+        "buttonId": "create_ticketasset",
+        "buttonStyle": "Primary"
+      },
+      "ticket": {
+        "prefix": "asset",
+        "intro": "{user}, thank you for opening a ticket. A staff member will assist you shortly."
+      }
+    }
+  }
+  
