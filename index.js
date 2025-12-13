@@ -15,15 +15,6 @@ const path = require("path");
 
 // ----- CONFIG -----
 const TOKEN = "I am not giving this. Buuuut ill keep everything else :)"; // <-- put your bot token here
-const WHITELISTED_GUILD_IDS = [
-  "1345479029213626443",
-  "1390358390248702002",
-  "1426388976737980458",
-  "1434695251485917197",
-  "1423087444491767902",
-  "1383257719913316402",
-  "1439406343889879155"
-];
 
 // ----- CLIENT -----
 const client = new Client({
@@ -60,13 +51,7 @@ client.once("ready", () => {
 client.on("interactionCreate", async interaction => {
   if (!interaction.isChatInputCommand()) return;
 
-  // ----- WHITELIST CHECK -----
-  if (!WHITELISTED_GUILD_IDS.includes(interaction.guildId)) {
-    return interaction.reply({
-      content: "❌ This bot is not allowed in this server.",
-      ephemeral: true
-    });
-  }
+  // ----- WHITELIST CHECK ---
 
   const command = client.commands.get(interaction.commandName);
   if (!command) return;
